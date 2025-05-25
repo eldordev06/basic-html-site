@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:first-child, tr:first-child th {
+    border-bottom: 0;
+}
+tr:nth-child(2), tr:nth-child(2) td {
+    border-top: 0;
+    padding-top: 0;
+}
+
+td, th {
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    padding-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    font-family: 'Inter', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    min-height: 100vh;
+    padding: 20px;
+
+    @media screen and (min-width: 850px) {
+        border: 2px solid black;
+    }
+}
+
+.header {
+    font-size: 1.2rem;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 650px) {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+}
+
+.header__icon {
+    width: 32px;
+    height: 32px;
+}
+
+@media screen and (min-width: 650px) {
+.header__list-item:first-child::before {
+    content: "";
+}
+
+.header__list-item::before{
+    content: " / ";
+}
+}
+
+.header__heading {
+    text-align: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__heading-descr {
+    font-size: .9rem;
+    color: gray;
+}
+
+.table-container {
+    overflow: auto;
+
+    @media screen and (max-width: 700px) {
+        box-shadow: -10px 0 5px inset gray;
+    }
+}
+
+.table {
+    max-width: 100%;
+    min-width: 650px;
+    line-height: 1.3;
+}
+
+.table__list-item::before {
+    content: '– ';
+}
+
+.table__text {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.reviews__container {
+    padding: 40px 0;
+}
+
+.reviews__heading {
+    padding-bottom: 30px;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reviews__card {
+    width: 30%;
+    min-width: 200px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reviews__name {
+    color: rgb(179, 179, 179);
+}
+
+.footer {
+    text-align: center;
+    padding: 50px 0 40px;
+    font-size: 1.2rem;
+}
